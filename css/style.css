@@ -1,0 +1,58 @@
+body {
+    padding-top: 50px;
+}
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.horiz-nav {
+    position: relative !important;
+}
+
+    /*.horiz-nav > ul {
+        margin-top: 130px;
+        margin-left: 50px !important;
+    }*/
+
+.navbar-collapse.collapse {
+    overflow: hidden !important;
+}
+
+@media (max-width: 768px) {
+    .horiz-nav > ul {
+        margin-top: 0;
+        margin-left: 0 !important;
+    }
+
+    .navbar-collapse.collapse {
+        overflow: visible !important;
+    }
+}
+
+.dropdown-menu {
+    width: 100%;
+    position: fixed;
+    top: 48px;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    .dropdown-menu li {
+        display: inline-block;
+    }
+
+        .dropdown-menu li.dropdown-menu {
+            background: url('http://decombh.org/img/nav_down.png') no-repeat bottom right !important;
+            background-position: 5px 9px !important;
+        }
+
+        .dropdown-menu li.dropdown .dropdown-menu {
+            top: 210px;
+        }
