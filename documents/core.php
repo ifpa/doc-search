@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 require_once realpath(dirname(__FILE__) . '/../autoload.php');
 
 $client_id = '1023222931494-co46lldi08somjekc8j5dp50i5f43l8u.apps.googleusercontent.com';
