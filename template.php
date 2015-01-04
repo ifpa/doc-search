@@ -1,0 +1,9 @@
+<?php
+require_once('layout/_header.php');
+?>
+<?php
+require_once('layout/_nav.php');
+?>
+<?php
+require_once('layout/_footer.php');
+?>
