@@ -7,8 +7,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Homepage</h1>
-            <p class="lead">Content here.</p>
+            <h2>Tracked Legislation</h2>
+            <p class="lead">PLS content will go here</p>
         </div>
     </div>
 </div>

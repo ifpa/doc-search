@@ -5,7 +5,7 @@ require_once('../layout/_nav.php');
 ?>
     <div class="container">
         <div class="panel">
-            <h2 class="panel-heading">Property/Casualty Documents</h2>
+            <h2 class="panel-heading">Worker&rsquo;s Compensation Documents</h2>
             <div class="panel-body">
                 <?php
 

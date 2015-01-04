@@ -11,6 +11,7 @@
     $all_class = (strpos($page, 'doc_all.php') !== false) ? "active" : "";
     $search_class = (strpos($page, 'doc_search.php') !== false) ? "active" : "";
     $calendar_class = (strpos($page, 'calendar.php') !== false) ? "active" : "";
+    $pls_class = (strpos($page, 'pls.php') !== false) ? "active" : "";
 ?>
 <nav>
     <!-- Static navbar -->
@@ -59,7 +60,10 @@
                             </li>
                         </ul>
                     </li>
-                    <li id="menu-item-174" class="<?=$calendar_class?>">
+                    <li class="<?=$pls_class?>">
+                        <a href="/pls.php">Tracked Legislation</a>
+                    </li>
+                    <li class="<?=$calendar_class?>">
                         <a href="/calendar.php">Calendar of Events</a>
                     </li>
                 </ul>

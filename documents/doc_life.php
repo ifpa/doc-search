@@ -4,9 +4,9 @@ require_once('../layout/_header.php');
 require_once('../layout/_nav.php');
 ?>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Life Documents</h2>
+        <div class="panel">
+            <h2 class="panel-heading">Life Documents</h2>
+            <div class="panel-body">
                 <?php
 
                 $result = array();
@@ -15,7 +15,7 @@ require_once('../layout/_nav.php');
                 do {
                     try {
                         $parameters = array(
-                            'q' => "'0B6tLr9V7FuanXzk2TzJXM2pJam8' in parents"
+                            'q' => "'0B6tLr9V7FuanUUozeF81OVoyV00' in parents"
                         );
 
                         if ($pageToken) {
@@ -33,15 +33,42 @@ require_once('../layout/_nav.php');
                     }
                 } while ($pageToken);
 
+                $filesort = array();
+                foreach ($result as $key=>$row) {
+                    $filesort[$key] = $row['createdDate'];
+                }
+
+                array_multisort($filesort, SORT_DESC, $result);
+
                 ?>
-                <ul class="file-list">
-                    <?php foreach ($result as $file): ?>
-                        <li>
-                            <img src="<?=$file['iconLink'];?>" />&nbsp;
-                            <a href="<?=$file['alternateLink'];?>" target="_blank"><span class="filename"><?=$file['title'];?></span></a>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="file-list">
+                            <?php foreach ($result as $file): ?>
+                                <?php if ($file['fileExtension'] == 'pdf' || $file['fileExtension'] == 'htm'): ?>
+                                    <ul>
+                                <?php endif; ?>
+                                <li>
+                                    <?php if ($file['fileExtension'] == ''): ?>
+                                    <?=date("n/j/Y", strtotime($file['createdDate']));?>
+                                    <?php endif; ?>
+                                    <img src="<?=$file['iconLink'];?>" />&nbsp;
+                                    <a href="<?=$file['alternateLink'];?>" target="_blank"><span class="filename"><?=$file['title'];?></span></a>
+                                </li>
+                                <?php if ($file['fileExtension'] == 'pdf' || $file['fileExtension'] == 'htm'): ?>
+                                    </ul>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+                <!--<div class="row">
+                    <div class="col-md-12">
+                        <pre>
+                            <?php /*var_dump($result); */?>
+                        </pre>
+                    </div>
+                </div>-->
             </div>
         </div>
     </div>
