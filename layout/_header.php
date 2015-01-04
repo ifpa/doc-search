@@ -5,6 +5,9 @@
         $_SESSION['show_error'] = true;
         header('Location:http://104.131.60.233/index.php');
         die();
+    } elseif ($_SERVER['PHP_SELF'] == '/index.php' && $_SESSION['logged_in']) {
+        header('Location:http://104.131.60.233/pls.php');
+        die();
     }
 ?>
 <!DOCTYPE html>
