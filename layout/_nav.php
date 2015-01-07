@@ -9,6 +9,7 @@
     $pipac_class = (strpos($page, 'doc_pipac.php') !== false) ? "active" : "";
     $min_class = (strpos($page, 'doc_min.php') !== false) ? "active" : "";
     $all_class = (strpos($page, 'doc_all.php') !== false) ? "active" : "";
+    $news_class = (strpos($page, 'doc_news.php') !== false) ? "active" : "";
     $search_class = (strpos($page, 'doc_search.php') !== false) ? "active" : "";
     $calendar_class = (strpos($page, 'calendar.php') !== false) ? "active" : "";
     $pls_class = (strpos($page, 'pls.php') !== false) ? "active" : "";
@@ -55,6 +56,9 @@
                             <li class="<?=$all_class?>">
                                 <a href="/documents/doc_all.php">All Steering Committees</a>
                             </li>
+                            <li class="<?=$news_class?>">
+                                <a href="/documents/doc_news.php">Newsletters</a>
+                            </li>
                             <li class="<?=$search_class?>">
                                 <a href="/documents/doc_search.php">Search</a>
                             </li>
@@ -65,6 +69,9 @@
                     </li>
                     <li class="<?=$calendar_class?>">
                         <a href="/calendar.php">Calendar of Events</a>
+                    </li>
+                    <li>
+                        <a href="http://ifptest.azurewebsites.net/">Public Site</a>
                     </li>
                 </ul>
             </div>
