@@ -45,17 +45,14 @@ require_once('../layout/_nav.php');
                     <div class="col-md-12">
                         <ul class="file-list">
                             <?php foreach ($result as $file): ?>
-                                <?php if ($file['fileExtension'] == 'pdf' || $file['fileExtension'] == 'htm'): ?>
+                                <?php if ($file['fileExtension'] == 'pdf' || $file['fileExtension'] == 'htm' || $file['fileExtension'] == 'xls' || $file['fileExtension'] == 'csv' || $file['fileExtension'] == 'xlsx'): ?>
                                     <ul>
                                 <?php endif; ?>
                                 <li>
-                                    <?php if ($file['fileExtension'] == ''): ?>
-                                    <?=date("n/j/Y", strtotime($file['createdDate']));?>
-                                    <?php endif; ?>
                                     <img src="<?=$file['iconLink'];?>" />&nbsp;
                                     <a href="<?=$file['alternateLink'];?>" target="_blank"><span class="filename"><?=$file['title'];?></span></a>
                                 </li>
-                                <?php if ($file['fileExtension'] == 'pdf' || $file['fileExtension'] == 'htm'): ?>
+                                <?php if ($file['fileExtension'] == 'pdf' || $file['fileExtension'] == 'htm' || $file['fileExtension'] == 'xls' || $file['fileExtension'] == 'csv' || $file['fileExtension'] == 'xlsx'): ?>
                                     </ul>
                                 <?php endif; ?>
                             <?php endforeach; ?>

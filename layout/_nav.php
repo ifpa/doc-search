@@ -71,7 +71,7 @@
                         <a href="/calendar.php">Calendar of Events</a>
                     </li>
                     <li>
-                        <a href="http://ifptest.azurewebsites.net/">Public Site</a>
+                        <a href="http://www.ifpenn.org/">Public Site</a>
                     </li>
                 </ul>
             </div>
